@@ -6,20 +6,30 @@
 
     <title>Laravel</title>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+    @vite('resources/css/app.css')
+
 
 </head>
-<body class="font-sans antialiased dark:bg-black dark:text-white/50">
-<nav>
-    <ul>
-        <li><a href="/">Inicio</a></li>
-        <li><a href="/nosotros">Nosotros</a></li>
-    </ul>
-</nav>
-<h1>@yield('titulo')</h1>
-<hr>
-@yield('contenido')
+<body class="bg-gray-100">
+<header class="p-5 border-b bg-white shadow">
+    <div class="container mx-auto flex justify-between items-center">
+        <a class="font-bold uppercase text-red-800 " href="/"><h1 class="text-3xl font-black">DevSocial</h1></a>
+        <nav class="flex gap-2 items-center">
+            <a class="font-bold uppercase text-red-800 text-sm" href="#">Login</a>
+            <a class="font-bold uppercase text-red-800 text-sm" href="/crear-cuenta">Crear Cuenta
+            </a>
+        </nav>
+    </div>
+</header>
+<main>
+    <h2 class="font-black text-center text-3xl mb-10">
+        @yield('titulo')
+    </h2>
+    @yield('contenido')
+</main>
+<footer class="mt-10 text-center p-5 text-gray-500 font-bold">
+    DevSocial {{ now()->year }} - Todos los derechos reservados
+</footer>
+
 </body>
 </html>

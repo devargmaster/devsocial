@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('titulo' )
-Página principal
+Página principal Laravel y Vite
 @endsection
 
 @section('contenido')
