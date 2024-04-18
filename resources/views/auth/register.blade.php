@@ -5,9 +5,9 @@
 @endsection
 
 @section('contenido')
-    <div class="md:flex md:justify-center">
-        <div class="md:w-4/12 ml-5  ">
-           <p>imagen</p>
+    <div class="md:flex md:justify-center md:gap-10 md:items-center">
+        <div class="md:w-6/12 ml-5">
+           <img src="{{'img/registrar.jpg'}}" alt="Imagen registro usuario"/>
         </div>
         <div class="md:w-4/12 m-5 bg-white p-6 rounded-lg shadow-2xl">
             <form>
