@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Laravel</title>
-
     @vite('resources/css/app.css')
-
-
 </head>
 <body class="bg-gray-100">
 <header class="p-5 border-b bg-white shadow">
@@ -16,7 +13,7 @@
         <a class="font-bold uppercase text-red-800 " href="/"><h1 class="text-3xl font-black">DevSocial</h1></a>
         <nav class="flex gap-2 items-center">
             <a class="font-bold uppercase text-red-800 text-sm" href="#">Login</a>
-            <a class="font-bold uppercase text-red-800 text-sm" href="/crear-cuenta">Crear Cuenta
+            <a class="font-bold uppercase text-red-800 text-sm" href={{ route('register') }}>Crear Cuenta
             </a>
         </nav>
     </div>

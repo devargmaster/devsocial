@@ -10,7 +10,8 @@
            <img src="{{'img/registrar.jpg'}}" alt="Imagen registro usuario"/>
         </div>
         <div class="md:w-4/12 m-5 bg-white p-6 rounded-lg shadow-2xl">
-            <form>
+            <form action="{{route('register')}}" method="post">
+                @csrf
                 <div class="mb-5">
                     <label for="name" class="mb-2 block uppercase text-gray-500 font-bold">Nombre:</label>
                     <input type="text"
@@ -18,6 +19,9 @@
                            name="name"
                             placeholder="Ingresa tu nombre"
                            class="border p-3 w-full rounded-lg"/>
+                    @error('name')
+                    <div class="text-red-500">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="mb-5">
                     <label id= "username" for="username" class="mb-2 block uppercase text-gray-500 font-bold">Username:</label>
